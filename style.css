@@ -14,14 +14,14 @@ body {
     background-size: 76%;
     background-repeat: no-repeat;
 }
+
 h2 {
     color: #3F8EE8;
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 300;
 }
 section, footer {
-    padding: 50px;
-    padding-top: 5px;
+    padding: 80px;
 }
 footer {
     background: linear-gradient(to bottom,  #4f4f4f 0%,#191919 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
@@ -131,7 +131,7 @@ header ul li a:focus {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 40px;
+    padding-top: 50px;
 }
 
 .hero-content {
@@ -140,7 +140,10 @@ header ul li a:focus {
     z-index: 2;
     margin-left: 30px;
 }
-
+.hero-content img {
+    width: 70%;
+    margin-left: 90px;
+}
 .hero-content h2 {
     margin-top: 0;
     margin-bottom: 20px;
@@ -149,65 +152,20 @@ header ul li a:focus {
 .hero-content h1 {
     font-size: 36px;
     margin-bottom: 20px;
-    color: #3F8EE8;
 }
 
 /* Conteneur pour le texte de bienvenue */
-.welcome-text {
-    display: inline-block;
-    position: relative;
-    width: 300px; 
-    height: 30px; 
-    overflow: hidden; /* Cache tout ce qui dépasse */
-    font-size: 18px;
-    color: #3F8EE8;
-    font-weight: bold;
-    text-align: left;
-    margin-left: 20px;
-}
 
-/* Style pour chaque message */
-.welcome-text span {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0; /* Par défaut, le texte est invisible */
-    transform: translateY(100%); /* Commence en dehors de la vue */
-    animation: slideText 6s infinite; 
-}
 
-/* Premier texte */
-.welcome-text span:nth-child(1) {
-    animation-delay: 0s;
-}
+.hero-content h1 {
 
-/* Deuxième texte */
-.welcome-text span:nth-child(2) {
-    animation-delay: 3s;
 }
-
-/* Animation Keyframes */
-@keyframes slideText {
-    0%, 20% {
-        transform: translateY(0); /* Affiche le texte */
-        opacity: 1; /* Texte visible */
-    }
-    40% {
-        transform: translateY(0); /* Le texte reste affiché */
-        opacity: 1;
-    }
-    60%, 100% {
-        transform: translateY(-100%); /* Fait défiler le texte vers le haut */
-        opacity: 0; /* Texte disparaît */
-    }
-}
-
+ 
 .hero-content h3 {
     color: #3F8EE8;
     margin-bottom: 35px;
+    margin-left: 120px;
+    margin-top: 40px;
     font-family: "Amatic SC", sans-serif;
 }
 
@@ -216,7 +174,6 @@ header ul li a:focus {
 h3.animated-text {
     font-family: "Amatic SC", sans-serif;
     font-size: 60px;
-    margin-top: 90px;
 }
 .animated-text {
     display: inline-block;
@@ -296,10 +253,16 @@ h3.animated-text {
 .hero-image img {
     width: 400px;
     height: 400px;
-    margin-top: -370px;
+    margin-top: -200px;
     border-radius: 50%;
     object-fit: cover;
    
+}
+.slogan {
+    position: relative;
+    top: -100px;
+    left: 150px;
+    font-style: italic;
 }
 #about {
     background-color: #edf1f9;
@@ -427,6 +390,13 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.footer-grid h2 {
+    text-align: left;
+    font-size: 16px;
+    color: #afabe4;
+    border-color: 1px solid #b3afe9;
+}
 .google-maps {
     background-image:url(contact.png);
     background-repeat: no-repeat;
@@ -437,6 +407,7 @@ h2 {
     padding: 20px;
     border-radius: 5px;
     opacity: 0.7;
+    margin-top: 33px;
     transition: all 0.4s ease;
 }
 .google-maps:hover {
@@ -454,15 +425,15 @@ footer ul li {
     padding: 10px;
 }
 footer ul img {
-    width: 20px;
-    margin-right: 10px;
+    width: 25px;
+    margin-right: 15px;
 }
 
-.footer-grid h2 {
-    text-align: left;
-}
 .footer-grid h2 img {
     width: 32px;
+}
+.footer-grid li {
+    font-size: 14px;
 }
 
 /* Style de base */
@@ -473,7 +444,10 @@ footer ul img {
     flex-direction: column;
     gap: 15px;
 }
+.footer-grid p {
+    font-size: 18px;
 
+}
 /* Champs de formulaire */
 .contact-form input,
 .contact-form textarea {
